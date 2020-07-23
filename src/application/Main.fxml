@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="893.0" prefWidth="1314.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="893.0" prefWidth="1314.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <Button id="start" fx:id="start" defaultButton="true" graphicTextGap="0.0" layoutX="546.0" layoutY="289.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="189.0" text="START">
          <font>
@@ -23,7 +23,7 @@
             <Font name="Lucida Console" size="25.0" />
          </font>
       </Button>
-      <Button id="highscores" defaultButton="true" layoutX="528.0" layoutY="485.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="226.0" text="HIGH SCORES" textFill="#000000f7">
+      <Button id="highscores" defaultButton="true" layoutX="528.0" layoutY="485.0" mnemonicParsing="false" onAction="#displayHighScores" prefHeight="57.0" prefWidth="226.0" text="HIGH SCORES" textFill="#000000f7">
          <font>
             <Font name="Lucida Console" size="25.0" />
          </font>
