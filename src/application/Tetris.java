@@ -34,9 +34,9 @@ public class Tetris extends Application {
 	private static Form nextObj = Controller.makeRect();
 	private static int linesNo = 0;
 
-	public static void main(String[] args) {
-		launch(args);
-	}
+	//public static void main(String[] args) {
+		//launch(args);
+	//}
 
 	@Override
 	public void start(Stage stage) throws Exception {
