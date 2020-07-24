@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="1268.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button defaultButton="true" layoutX="494.0" layoutY="414.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="283.0" text="BACK TO MAIN MENU">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button defaultButton="true" layoutX="211.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="283.0" text="TRACK 1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Text fill="#cbd61c" layoutX="482.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SETTINGS" wrappingWidth="304.0">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Text>
+      <Button defaultButton="true" layoutX="635.0" layoutY="314.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="283.0" text="HARD MODE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button defaultButton="true" layoutX="493.0" layoutY="514.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="283.0" text="EXIT GAME">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button defaultButton="true" layoutX="352.0" layoutY="314.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="283.0" text="EASY MODE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button defaultButton="true" layoutX="494.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="283.0" text="TRACK 2">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button defaultButton="true" layoutX="777.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="283.0" text="TRACK 3">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
