@@ -13,12 +13,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="893.0" prefWidth="1314.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <Button id="start" fx:id="start" defaultButton="true" graphicTextGap="0.0" layoutX="546.0" layoutY="289.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="189.0" text="START">
+      <Button id="start" defaultButton="true" graphicTextGap="0.0" layoutX="546.0" layoutY="289.0" mnemonicParsing="false" onAction="#displayGame" prefHeight="63.0" prefWidth="189.0" text="START">
          <font>
             <Font name="Lucida Sans Typewriter Regular" size="31.0" />
          </font>
       </Button>
-      <Button id="settings" defaultButton="true" layoutX="546.0" layoutY="399.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="189.0" text="SETTINGS">
+      <Button id="settings" defaultButton="true" layoutX="546.0" layoutY="399.0" mnemonicParsing="false" onAction="#displaySettings" prefHeight="48.0" prefWidth="189.0" text="SETTINGS">
          <font>
             <Font name="Lucida Console" size="25.0" />
          </font>
@@ -28,7 +28,7 @@
             <Font name="Lucida Console" size="25.0" />
          </font>
       </Button>
-      <Button id="exit" defaultButton="true" layoutX="593.0" layoutY="572.0" mnemonicParsing="false" text="EXIT">
+      <Button id="exit" fx:id="closeButton" defaultButton="true" layoutX="593.0" layoutY="572.0" mnemonicParsing="false" onAction="#closeButtonAction" text="EXIT">
          <font>
             <Font name="Lucida Console" size="25.0" />
          </font>

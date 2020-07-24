@@ -6,23 +6,62 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class MainController {
+	
+	@FXML private javafx.scene.control.Button closeButton;
+	
+	@FXML
+	private void closeButtonAction() {
+		Stage stage = (Stage) closeButton.getScene().getWindow();
+		stage.close();
+	}
 
 	@FXML
 	public void displayHighScores(ActionEvent event) {
 
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("High Scores.fxml"));
-			Parent root = loader.load();
-			HighScoreController highscore = loader.getController();
-			highscore.displayHighScores();
-			updateButton.getScene().setRoot(root);
+			Stage mainStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+			AnchorPane scores = (AnchorPane)FXMLLoader.load(getClass().getResource("HighScores.fxml"));
+			Scene highScore = new Scene(scores,1200,750);
+			mainStage.setScene(highScore);
+			mainStage.show();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-}
+	}
+
+	@FXML
+	public void displaySettings(ActionEvent event) {
+
+		try {
+			Stage mainStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+			AnchorPane scores = (AnchorPane)FXMLLoader.load(getClass().getResource("Settings.fxml"));
+			Scene highScore = new Scene(scores,1200,750);
+			mainStage.setScene(highScore);
+			mainStage.show();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@FXML
+	public void displayGame(ActionEvent event) {
+
+		try {
+			Stage mainStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+			AnchorPane scores = (AnchorPane)FXMLLoader.load(getClass().getResource("GameMode.fxml"));
+			Scene highScore = new Scene(scores,1200,750);
+			mainStage.setScene(highScore);
+			mainStage.show();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

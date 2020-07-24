@@ -68,7 +68,7 @@
             </LinearGradient>
          </stroke>
       </Rectangle>
-      <Button alignment="CENTER" layoutX="460.0" layoutY="669.0" mnemonicParsing="false" onAction="#mainMenu" style="-fx-background-color: BLACK; -fx-border-color: YELLOW;" text="MAIN MENU" textFill="#fbff00">
+      <Button alignment="CENTER" layoutX="460.0" layoutY="669.0" mnemonicParsing="false" onAction="#displayMenu" style="-fx-background-color: BLACK; -fx-border-color: YELLOW;" text="MAIN MENU" textFill="#fbff00">
          <font>
             <Font name="Lucida Console" size="37.0" />
          </font>
