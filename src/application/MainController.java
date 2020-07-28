@@ -55,7 +55,7 @@ public class MainController {
 
 		try {
 			Stage mainStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-			AnchorPane scores = (AnchorPane)FXMLLoader.load(getClass().getResource("GameMode.fxml"));
+			AnchorPane scores = (AnchorPane)FXMLLoader.load(getClass().getResource("PlayerMode.fxml"));
 			Scene highScore = new Scene(scores,1200,750);
 			mainStage.setScene(highScore);
 			mainStage.show();
@@ -64,4 +64,19 @@ public class MainController {
 			e.printStackTrace();
 		}
 	}
+	
+	@FXML
+	public void displayMenu(ActionEvent event) {
+		try {
+			Parent view = (AnchorPane)FXMLLoader.load(getClass().getResource("Main.fxml"));
+			Scene scene = new Scene(view,1200,750);
+			Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+			window.setScene(scene);
+			window.show();
+		} 
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

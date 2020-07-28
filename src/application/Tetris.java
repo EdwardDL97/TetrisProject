@@ -20,10 +20,10 @@ import javafx.stage.Stage;
 
 public class Tetris extends Application {
 	// The variables
-	public static final int MOVE = 25;
-	public static final int SIZE = 25;
-	public static int XMAX = SIZE * 12;
-	public static int YMAX = SIZE * 24;
+	public static final int MOVE = 50;
+	public static final int SIZE = 50;
+	public static int XMAX = SIZE * 24;
+	public static int YMAX = SIZE * 15;
 	public static int[][] MESH = new int[XMAX / SIZE][YMAX / SIZE];
 	private static Pane group = new Pane();
 	private static Form object;
@@ -34,10 +34,6 @@ public class Tetris extends Application {
 	private static Form nextObj = Controller.makeRect();
 	private static int linesNo = 0;
 
-	//public static void main(String[] args) {
-		//launch(args);
-	//}
-
 	@Override
 	public void start(Stage stage) throws Exception {
 		for (int[] a : MESH) {
@@ -46,14 +42,11 @@ public class Tetris extends Application {
 
 		Line line = new Line(XMAX, 0, XMAX, YMAX);
 		Text scoretext = new Text("Score: ");
-		scoretext.setStyle("-fx-font: 20 arial;");
 		scoretext.setY(50);
 		scoretext.setX(XMAX + 5);
 		Text level = new Text("Lines: ");
-		level.setStyle("-fx-font: 20 arial;");
 		level.setY(100);
 		level.setX(XMAX + 5);
-		level.setFill(Color.GREEN);
 		group.getChildren().addAll(scoretext, line, level);
 
 		Form a = nextObj;
@@ -62,7 +55,6 @@ public class Tetris extends Application {
 		object = a;
 		nextObj = Controller.makeRect();
 		stage.setScene(scene);
-		stage.setTitle("T E A M    T E T R I S");
 		stage.show();
 
 		Timer fall = new Timer();
@@ -76,7 +68,7 @@ public class Tetris extends Application {
 						else
 							top = 0;
 
-						if (top == 2) {
+						if (top == 3) {
 							// GAME OVER
 							Text over = new Text("Its Over Son!");
 							over.setFill(Color.RED);
@@ -86,13 +78,9 @@ public class Tetris extends Application {
 							group.getChildren().add(over);
 							game = false;
 						}
-						// Exit
-						if (top == 15) {
-							System.exit(0);
-						}
 
 						if (game) {
-							MoveDown(object);
+							//MoveDown(object);
 							scoretext.setText("Score: " + Integer.toString(score));
 							level.setText("Lines: " + Integer.toString(linesNo));
 						}
