@@ -22,7 +22,7 @@ public class Tetris extends Application {
 	// The variables
 	public static final int MOVE = 50;
 	public static final int SIZE = 50;
-	public static int XMAX = SIZE * 24;
+	public static int XMAX = SIZE * 21;
 	public static int YMAX = SIZE * 15;
 	public static int[][] MESH = new int[XMAX / SIZE][YMAX / SIZE];
 	private static Pane group = new Pane();
@@ -40,13 +40,16 @@ public class Tetris extends Application {
 			Arrays.fill(a, 0);
 		}
 
-		Line line = new Line(XMAX, 0, XMAX, YMAX);
+		Line line = new Line(XMAX - 25, 0, XMAX - 25, YMAX);
 		Text scoretext = new Text("Score: ");
+		scoretext.setStyle("-fx-font: 20 arial;");
 		scoretext.setY(50);
 		scoretext.setX(XMAX + 5);
 		Text level = new Text("Lines: ");
+		level.setStyle("-fx-font: 20 arial;");
 		level.setY(100);
 		level.setX(XMAX + 5);
+		level.setFill(Color.GREEN);
 		group.getChildren().addAll(scoretext, line, level);
 
 		Form a = nextObj;
@@ -55,6 +58,7 @@ public class Tetris extends Application {
 		object = a;
 		nextObj = Controller.makeRect();
 		stage.setScene(scene);
+		stage.setTitle("T E A M    T E T R I S");
 		stage.show();
 
 		Timer fall = new Timer();
@@ -68,7 +72,7 @@ public class Tetris extends Application {
 						else
 							top = 0;
 
-						if (top == 3) {
+						if (top == 2) {
 							// GAME OVER
 							Text over = new Text("Its Over Son!");
 							over.setFill(Color.RED);
@@ -78,9 +82,13 @@ public class Tetris extends Application {
 							group.getChildren().add(over);
 							game = false;
 						}
+						// Exit
+						if (top == 15) {
+							System.exit(0);
+						}
 
 						if (game) {
-							//MoveDown(object);
+							MoveDown(object);
 							scoretext.setText("Score: " + Integer.toString(score));
 							level.setText("Lines: " + Integer.toString(linesNo));
 						}
@@ -413,7 +421,7 @@ public class Tetris extends Application {
 					full++;
 			}
 			if (full == MESH.length)
-			lines.add(i);
+				lines.add(i);
 			//lines.add(i + lines.size());
 			full = 0;
 		}

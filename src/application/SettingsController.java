@@ -43,7 +43,7 @@ public class SettingsController extends Tetris{
 	public void secondTrack(ActionEvent event){
 		if(newSong != null)
 			newSong.stop();
-		String path = new File("src/soundtracks/Tetris.mp3").getAbsolutePath();
+		String path = new File("src/soundtracks/01 - continuum.mp3").getAbsolutePath();
 		Media media = new Media(new File(path).toURI().toString());
 		newSong = new MediaPlayer(media);
 		newSong.setCycleCount(MediaPlayer.INDEFINITE);
