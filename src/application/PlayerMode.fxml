@@ -8,25 +8,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="893.0" prefWidth="1314.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <Button layoutX="254.0" layoutY="230.0" mnemonicParsing="false" onAction="#startGame" prefHeight="86.0" prefWidth="269.0" text="SINGLE PLAYER">
-        <font>
-            <Font name="Lucida Sans Typewriter Regular" size="28.0" />
-         </font>
-      </Button>
-      <Button layoutX="792.0" layoutY="230.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="269.0" text="MULTIPLAYER">
-         <font>
-            <Font name="Lucida Sans Typewriter Regular" size="28.0" />
-         </font>
-      </Button>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="494.0" layoutY="67.0" prefHeight="86.0" prefWidth="326.0" text="SELECT MODE" textAlignment="CENTER">
-         <font>
-            <Font name="Lucida Sans Typewriter Regular" size="44.0" />
-         </font>
-      </Label>
-      <Button layoutX="523.0" layoutY="438.0" mnemonicParsing="false" onAction="#displayMenu" prefHeight="86.0" prefWidth="269.0" text="MAIN MENU">
+      <Button layoutX="523.0" layoutY="641.0" mnemonicParsing="false" onAction="#displayMenu" prefHeight="86.0" prefWidth="269.0" text="MAIN MENU">
          <font>
             <Font size="28.0" />
          </font>
       </Button>
+      <TextField fx:id="playerName" alignment="CENTER" layoutX="381.0" layoutY="197.0" prefHeight="61.0" prefWidth="552.0" promptText="Enter Name" />
+      <Button layoutX="523.0" layoutY="398.0" mnemonicParsing="false" onAction="#startGame" prefHeight="86.0" prefWidth="269.0" text="START">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button layoutX="452.0" layoutY="306.0" mnemonicParsing="false" onAction="#readName" prefHeight="39.0" prefWidth="427.0" text="SUBMIT" />
    </children>
 </AnchorPane>

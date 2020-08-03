@@ -1,31 +1,26 @@
 package application;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.io.File;	
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.SplitPane;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 
 public class SettingsController extends Tetris{
-	
+
 	@FXML private javafx.scene.control.Button exitButton;
 	MediaPlayer newSong;
-	
-	
+
+
 	public static int speed = 900;
-	
+
 	@FXML
 	public void firstTrack(ActionEvent event){
 		if(newSong != null)
@@ -36,9 +31,9 @@ public class SettingsController extends Tetris{
 		newSong.setCycleCount(MediaPlayer.INDEFINITE);
 		newSong.setVolume(0.3);
 		newSong.play();
-	//	newSong = newSong;
+		//	newSong = newSong;
 	}
-	
+
 	@FXML
 	public void secondTrack(ActionEvent event){
 		if(newSong != null)
@@ -49,9 +44,9 @@ public class SettingsController extends Tetris{
 		newSong.setCycleCount(MediaPlayer.INDEFINITE);
 		newSong.setVolume(0.3);
 		newSong.play();
-	//	oldSong = newSong;
+		//	oldSong = newSong;
 	}
-	
+
 	@FXML
 	public void thirdTrack(ActionEvent event){
 		if(newSong != null)
@@ -62,31 +57,31 @@ public class SettingsController extends Tetris{
 		newSong.setCycleCount(MediaPlayer.INDEFINITE);
 		newSong.setVolume(0.3);
 		newSong.play();
-	//	oldSong = newSong;
+		//	oldSong = newSong;
 	}
-	
+
 	@FXML
 	public void easyMode(){
-		
-		speed = 900;
-		
-		
+		new Alert(Alert.AlertType.CONFIRMATION, "baby mode activated").show();
+		speed = 500;
+
+
 	}
-	
-	
-	
+
+
+
 	@FXML
 	public void hardMode(){
-	
+		new Alert(Alert.AlertType.CONFIRMATION, "Get ready for HELL").show();
 		speed = 150;
-		
-		
+
+
 	}
-	
+
 	public static int getSpeed(){
 		return speed;
 	}
-	
+
 	@FXML
 	public void toMain(ActionEvent event){
 		try {
@@ -99,11 +94,13 @@ public class SettingsController extends Tetris{
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@FXML
 	public void exitGame(){
+		HighScoreController.saveScores("PlayerScores.txt", HighScoreController.playerHighScore);
+		HighScoreController.saveNames("PlayerNames.txt", HighScoreController.playerNameHighScore);
 		Stage stage = (Stage) exitButton.getScene().getWindow();
 		stage.close();
 	}
