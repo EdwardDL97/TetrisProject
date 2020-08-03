@@ -1,3 +1,4 @@
+// Group 1 Team Tetris
 package application;
 
 import java.io.IOException;	
@@ -37,6 +38,10 @@ public class Tetris extends Application {
 	private static int linesNo = 0;
 
 	@Override
+	
+	/*
+	 * start method creates the stage for the tetris game. The stage includes a vertical line, a score text, and line text
+	 */
 	public void start(Stage stage) throws Exception {
 		for (int[] a : GRID) {
 			Arrays.fill(a, 0);
@@ -86,7 +91,7 @@ public class Tetris extends Application {
 							pane.getChildren().add(over);
 							game = false;
 						}
-						// Exit
+						// HIGH SCORE
 						if (top == 15) {
 							try {
 								FXMLLoader loader = new FXMLLoader(getClass().getResource("HighScores.fxml"));
@@ -113,6 +118,10 @@ public class Tetris extends Application {
 		};
 		fall.schedule(task, 0, SettingsController.getSpeed()); 
 	}
+	
+	/*
+	 * moveOnKeyPress method creates functionality on the arrow keys to move the shapes in the game
+	 */
 	private void moveOnKeyPress(Form form) {
 		scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
 			@Override
@@ -137,6 +146,10 @@ public class Tetris extends Application {
 			}
 		});
 	}
+	
+	/*
+	 * MoveTurn method creates functionality on the shapes to turn when pressing the up arrow key
+	 */
 
 	private void MoveTurn(Form form) {
 		int f = form.form;
@@ -426,6 +439,9 @@ public class Tetris extends Application {
 		}
 	}
 
+	/*
+	 * RemoveRows method deletes a line when all the blocks in a row have been filled
+	 */
 	private void RemoveRows(Pane pane) {
 		ArrayList<Node> rects = new ArrayList<Node>();
 		ArrayList<Integer> lines = new ArrayList<Integer>();

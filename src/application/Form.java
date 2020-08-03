@@ -1,8 +1,13 @@
+// Group 1 Team Tetris
 package application;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+/*
+ * Form class is used to create the blocks of the shapes. 
+ * There are a total of 7 shapes (j, l, o, s, t, z, i) and each shape is assigned a color
+ */
 public class Form {
 	Rectangle a;
 	Rectangle b;

@@ -1,3 +1,4 @@
+// Group 1 Team Tetris
 package application;
 
 
@@ -43,6 +44,10 @@ public class Controller {
 		}
 	}
 
+	/*
+	 * makeRect method creates the shapes. There are a total of seven shape and each shape represent a letter.
+	 * These shapes are j, l, o, s, t, z, i
+	 */
 	public static Form makeRect() {
 		int block = (int) (Math.random() * 100);
 		String name;

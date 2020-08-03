@@ -13,12 +13,16 @@
             <Font size="28.0" />
          </font>
       </Button>
-      <TextField fx:id="playerName" alignment="CENTER" layoutX="381.0" layoutY="197.0" prefHeight="61.0" prefWidth="552.0" promptText="Enter Name" />
-      <Button layoutX="523.0" layoutY="398.0" mnemonicParsing="false" onAction="#startGame" prefHeight="86.0" prefWidth="269.0" text="START">
+      <TextField fx:id="playerName" alignment="CENTER" layoutX="381.0" layoutY="227.0" prefHeight="61.0" prefWidth="552.0" promptText="Enter Name" />
+      <Button layoutX="524.0" layoutY="490.0" mnemonicParsing="false" onAction="#startGame" prefHeight="86.0" prefWidth="269.0" text="START">
          <font>
             <Font size="28.0" />
          </font>
       </Button>
-      <Button layoutX="452.0" layoutY="306.0" mnemonicParsing="false" onAction="#readName" prefHeight="39.0" prefWidth="427.0" text="SUBMIT" />
+      <Button layoutX="523.0" layoutY="336.0" mnemonicParsing="false" onAction="#readName" prefHeight="86.0" prefWidth="269.0" text="SUBMIT">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -1,3 +1,4 @@
+// Group 1 Team Tetris
 package application;
 
 
@@ -9,8 +10,16 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXMLLoader;
 
+/*
+ * Main Class is used to launch the game tetris. 
+ * The game starts by opening the menu screen where the player can go to start, settings, high scores, and exit
+ */
 
 public class Main extends Application {
+	
+	/*
+	 * Start method creates the main menu screen where the player can navigate through the game
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -18,6 +27,7 @@ public class Main extends Application {
 			Scene scene = new Scene(root,1200,750);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
+			primaryStage.setTitle("T E A M    T E T R I S");
 			primaryStage.show();
 			primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 				public void handle(WindowEvent event) {
@@ -31,6 +41,9 @@ public class Main extends Application {
 	}
 
 
+	/*
+	 * main method launches the program 
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

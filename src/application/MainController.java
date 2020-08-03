@@ -1,3 +1,4 @@
+// Group 1 Team Tetris
 package application;
 
 import java.io.BufferedReader;
@@ -29,6 +30,10 @@ public class MainController implements Initializable {
 	@FXML private javafx.scene.control.Button closeButton; // Button set to close window
 	@FXML private TextField playerName;
 	public static String name;
+	
+	/*
+	 * readName method reads and stores the player's name into a string that is used for high scores.
+	 */
 
 	public void readName(ActionEvent e) {
 		name = playerName.getText();
@@ -56,13 +61,6 @@ public class MainController implements Initializable {
 	public void displayHighScores(ActionEvent event) {
 
 		try {
-			/*
-			Stage mainStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-			AnchorPane scores = (AnchorPane)FXMLLoader.load(getClass().getResource("HighScores.fxml"));
-			Scene highScore = new Scene(scores,1200,750);
-			mainStage.setTitle("T E A M    T E T R I S");
-			mainStage.setScene(highScore);
-			mainStage.show(); */
 			Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("HighScores.fxml"));
 			Parent root = loader.load();
@@ -88,6 +86,7 @@ public class MainController implements Initializable {
 			AnchorPane settings = (AnchorPane)FXMLLoader.load(getClass().getResource("Settings.fxml"));
 			Scene settingScreen = new Scene(settings,1200,750);
 			mainStage.setScene(settingScreen);
+			mainStage.setTitle("T E A M    T E T R I S");
 			mainStage.show();
 		}
 		catch(Exception e) {
@@ -108,6 +107,7 @@ public class MainController implements Initializable {
 			AnchorPane select = (AnchorPane)FXMLLoader.load(getClass().getResource("PlayerMode.fxml"));
 			Scene selectScreen = new Scene(select,1200,750);
 			mainStage.setScene(selectScreen);
+			mainStage.setTitle("T E A M    T E T R I S");
 			mainStage.show();
 		}
 		catch(Exception e) {
@@ -128,6 +128,7 @@ public class MainController implements Initializable {
 			AnchorPane menu = (AnchorPane)FXMLLoader.load(getClass().getResource("Main.fxml"));
 			Scene mainMenu = new Scene(menu,1200,750);
 			mainStage.setScene(mainMenu);
+			mainStage.setTitle("T E A M    T E T R I S");
 			mainStage.show();
 		}
 		catch(Exception e) {
@@ -150,6 +151,10 @@ public class MainController implements Initializable {
 			e.printStackTrace();
 		}
 	}
+	
+	/*
+	 * initialize method is used to save the name and score of the people with the high scores
+	 */
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

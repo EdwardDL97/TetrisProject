@@ -1,3 +1,4 @@
+// Group 1 Team Tetris
 package application;
 
 import java.io.BufferedReader;	
@@ -38,6 +39,10 @@ public class HighScoreController implements Initializable {
 	public Label FourthPlace, FourthScore;
 	@FXML
 	public Label FifthPlace, FifthScore; 
+	
+	/*
+	 * saveNames is used to save the player's name
+	 */
 
 
 	public static void saveNames(String fileName, ArrayList<String> a) {
@@ -58,6 +63,10 @@ public class HighScoreController implements Initializable {
 			e.printStackTrace();
 		}		
 	}
+	
+	/*
+	 * saveScores is used to save the player's score
+	 */
 
 	public static void saveScores(String fileName, ArrayList<Integer> a) {
 
@@ -80,6 +89,10 @@ public class HighScoreController implements Initializable {
 		}		
 	}
 
+	/*
+	 * displayMenu method has a parameter ActionEvent called event.
+	 * This method is used to switch from the High Score screen back to the Main Menu.
+	 */
 	@FXML
 	public void displayMenu(ActionEvent event) {
 		try {
@@ -93,6 +106,10 @@ public class HighScoreController implements Initializable {
 			e.printStackTrace();
 		}
 	}
+	
+	/*
+	 * highScores method is used to print out the names of people placed first-fifth
+	 */
 
 	@FXML
 	public void highScores() {
@@ -170,6 +187,10 @@ public class HighScoreController implements Initializable {
 			e.printStackTrace();
 		}
 	}
+	
+	/*
+	 * updateHighScores method is used to update the player name and scores when a player beats the score.
+	 */
 
 	public void updateHighScores(int score, String name) {
 
@@ -198,6 +219,10 @@ public class HighScoreController implements Initializable {
 		}
 
 	}
+	
+	/*
+	 * initialize method is used to save the name and score of the people with the high scores
+	 */
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

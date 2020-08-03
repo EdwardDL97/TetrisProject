@@ -1,3 +1,4 @@
+// Group 1 Team Tetris
 package application;
 
 import java.io.File;	
@@ -13,13 +14,23 @@ import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
+/*
+ * The SettingsController class functionality is used to make changes. In the settings screen, player
+ * can choose between three soundtracks, change difficulty, go back to main menu, and exit game
+ */
+
 public class SettingsController extends Tetris{
 
-	@FXML private javafx.scene.control.Button exitButton;
+	@FXML private javafx.scene.control.Button exitButton; // This button is used to exit the game
 	MediaPlayer newSong;
 
 
 	public static int speed = 900;
+	
+	/*
+	 * firstTrack method is used to play tetris-gameboy-03.mp3. If another track is playing,
+	 * then it will stop the original track, else it will just play the track.
+	 */
 
 	@FXML
 	public void firstTrack(ActionEvent event){
@@ -31,8 +42,12 @@ public class SettingsController extends Tetris{
 		newSong.setCycleCount(MediaPlayer.INDEFINITE);
 		newSong.setVolume(0.3);
 		newSong.play();
-		//	newSong = newSong;
 	}
+	
+	/*
+	 * secondTrack method is used to play 01 - continuum.mp3. If another track is playing,
+	 * then it will stop the original track, else it will just play the track.
+	 */
 
 	@FXML
 	public void secondTrack(ActionEvent event){
@@ -44,8 +59,12 @@ public class SettingsController extends Tetris{
 		newSong.setCycleCount(MediaPlayer.INDEFINITE);
 		newSong.setVolume(0.3);
 		newSong.play();
-		//	oldSong = newSong;
 	}
+	
+	/*
+	 * thirdTrack method is used to play 02. Game Theme.mp3. If another track is playing,
+	 * then it will stop the original track, else it will just play the track.
+	 */
 
 	@FXML
 	public void thirdTrack(ActionEvent event){
@@ -60,27 +79,33 @@ public class SettingsController extends Tetris{
 		//	oldSong = newSong;
 	}
 
+	// easyMode method changes the speed to set the difficulty
 	@FXML
 	public void easyMode(){
-		new Alert(Alert.AlertType.CONFIRMATION, "baby mode activated").show();
+		new Alert(Alert.AlertType.CONFIRMATION, "baby mode activated").show(); // alert to show difficulty has changed to easy
 		speed = 500;
 
 
 	}
 
 
-
+	// hardMode method changes the speed to set the difficulty
 	@FXML
 	public void hardMode(){
-		new Alert(Alert.AlertType.CONFIRMATION, "Get ready for HELL").show();
+		new Alert(Alert.AlertType.CONFIRMATION, "Get ready for HELL").show(); // alert to show difficulty has changed to hard
 		speed = 150;
 
 
 	}
-
+	
+	// getSpeed construct is used to get the speed and return it to Tetris.java
 	public static int getSpeed(){
 		return speed;
 	}
+	
+	/*
+	 * toMain method is a method to transition screens from the settings scene to the main menu scene
+	 */
 
 	@FXML
 	public void toMain(ActionEvent event){
@@ -97,6 +122,9 @@ public class SettingsController extends Tetris{
 
 	}
 
+	/*
+	 * exitGame method is used to save all the player names and scores and then close out of the screen
+	 */
 	@FXML
 	public void exitGame(){
 		HighScoreController.saveScores("PlayerScores.txt", HighScoreController.playerHighScore);
