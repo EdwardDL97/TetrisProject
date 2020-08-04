@@ -3,11 +3,11 @@ Team Tetris
 
 Team member names UTSA ID:
 
-1. 
+1. Edward Diaz Lopez
 2. Clinton Welding RKD897
-3. 
-4. 
-5. 
+3. Anthony Jreij
+4. Johann Tschetter
+5. Dylan Dumas
 
 
 This application is modeled after the popular tile matching game, Tetris. The objective of our application is 
