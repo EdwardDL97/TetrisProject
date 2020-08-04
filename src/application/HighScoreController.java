@@ -108,7 +108,7 @@ public class HighScoreController implements Initializable {
 	}
 	
 	/*
-	 * highScores method is used to print out the names of people placed first-fifth
+	 * highScores method is used to set the labels to the names/scores of people placed first-fifth
 	 */
 
 	@FXML

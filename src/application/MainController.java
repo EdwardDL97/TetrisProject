@@ -29,7 +29,7 @@ public class MainController implements Initializable {
 
 	@FXML private javafx.scene.control.Button closeButton; // Button set to close window
 	@FXML private TextField playerName;
-	public static String name;
+	public static String name = "";
 	
 	/*
 	 * readName method reads and stores the player's name into a string that is used for high scores.

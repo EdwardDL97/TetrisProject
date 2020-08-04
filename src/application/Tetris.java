@@ -38,7 +38,7 @@ public class Tetris extends Application {
 	private static int linesNo = 0;
 
 	@Override
-	
+
 	/*
 	 * start method creates the stage for the tetris game. The stage includes a vertical line, a score text, and line text
 	 */
@@ -101,7 +101,6 @@ public class Tetris extends Application {
 								highscore.highScores();
 								stage.getScene().setRoot(root);
 
-
 							} catch (IOException e) {
 								e.printStackTrace();
 							}							
@@ -118,7 +117,7 @@ public class Tetris extends Application {
 		};
 		fall.schedule(task, 0, SettingsController.getSpeed()); 
 	}
-	
+
 	/*
 	 * moveOnKeyPress method creates functionality on the arrow keys to move the shapes in the game
 	 */
@@ -146,7 +145,7 @@ public class Tetris extends Application {
 			}
 		});
 	}
-	
+
 	/*
 	 * MoveTurn method creates functionality on the shapes to turn when pressing the up arrow key
 	 */
