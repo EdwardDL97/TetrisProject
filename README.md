@@ -7,7 +7,7 @@ Team member names UTSA ID:
 2. Clinton Welding RKD897
 3. Anthony Jreij RPP546
 4. Johann Tschetter PZT638
-5. Dylan Dumas
+5. Dylan Dumas RAT312
 
 
 This application is modeled after the popular tile matching game, Tetris. The objective of our application is 
