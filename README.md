@@ -6,7 +6,7 @@ Team member names UTSA ID:
 1. Edward Diaz Lopez GFT586
 2. Clinton Welding RKD897
 3. Anthony Jreij RPP546
-4. Johann Tschetter
+4. Johann Tschetter PZT638
 5. Dylan Dumas
 
 
@@ -18,6 +18,12 @@ the pieces. To manipulate the pieces the user uses the arrow keys: left, right a
 After the game ends, the user's score will be stored in a high scores file and displayed on the high scores screen 
 from the main menu. The settings menu has several options including the ability to change what music you would like 
 to play and the difficulty the game should be set at.
+
+Known Bugs:
+
+1. While playing the sound track if you switch between menus and then play another sound track they will play over the top of each other instead of stopping one sound track and playing another. 
+
+2. You have to leave a sound track playing for a couple seconds in settings before changing menus so it doesnt cut off. 
 
 To create a clone of this project:
 1.	On GitHub, navigate to the main page of the repository at https://github.com/EdwardDL97/TetrisProject
