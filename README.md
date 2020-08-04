@@ -3,9 +3,9 @@ Team Tetris
 
 Team member names UTSA ID:
 
-1. Edward Diaz Lopez
+1. Edward Diaz Lopez GFT586
 2. Clinton Welding RKD897
-3. Anthony Jreij
+3. Anthony Jreij RPP546
 4. Johann Tschetter
 5. Dylan Dumas
 
