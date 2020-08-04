@@ -1,4 +1,15 @@
 # TetrisProject
+Team Tetris
+
+Team member names UTSA ID:
+
+1. 
+2. Clinton Welding RKD897
+3. 
+4. 
+5. 
+
+
 This application is modeled after the popular tile matching game, Tetris. The objective of our application is 
 to attempt to score as many points as possible while completing lines using differently shaped game pieces. When 
 a line is completed with blocks across the board, the row will disappear and grant the player points. The game 
